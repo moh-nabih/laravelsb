@@ -17,7 +17,7 @@ class TaskController extends Controller
     // Show create form
     public function create()
     {
-        return view('tasks.create');
+        return view('tasks.partials.form');
     }
 
     // Store new task
@@ -36,7 +36,7 @@ class TaskController extends Controller
     // Show edit form
     public function edit(Task $task)
     {
-        return view('tasks.edit', compact('task'));
+        return view('tasks.partials.form', compact('task'));
     }
 
     // Update task

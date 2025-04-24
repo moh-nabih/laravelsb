@@ -14,7 +14,7 @@ Route::patch('/tasks/{task}/toggle', [TaskController::class, 'toggle'])->name('t
 
 Route::get('/string-tools', function () {
     return view('string-tools');
-});
+})->name('string-tools');
 
 Route::post('/string-tools', function (Request $request) {
     $original = $request->input('text_input');

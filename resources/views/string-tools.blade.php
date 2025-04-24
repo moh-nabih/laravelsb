@@ -10,7 +10,7 @@
         <form method="POST" action="{{ route('string-tools') }}" class="mb-4">
             @csrf
             <input type="text" name="text_input" placeholder="Enter your text" required class="border p-2 w-full mb-2">
-            <button type="submit" class="bg-blue-500 text-white px-4 py-2">Process</button>
+            <button type="submit" class="btn btn-primary">Process</button>
         </form>
 
         @isset($result)
@@ -33,8 +33,8 @@
             </ul>
             
             <h3 class="text-lg font-semibold mt-4">Is valid:</h3>
-            <p>{{ $stack }}</p>
-            <p>{{ $isValid }}</p>
+            <p>Paranthesis left: {{ $stack }}</p>
+            <p>Is valid? {{ $isValid? "Valid" : "Invalid" }}</p>
         @endisset
     </div>
 @endsection
