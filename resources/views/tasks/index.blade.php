@@ -15,7 +15,7 @@
 
     <div class="row">
         @foreach ($tasks as $task)
-            <div class="m-3 p-3 border col-3 border-dark rounded">
+            <div class="m-3 p-3 border col-3 col-sm-5 border-dark rounded">
                 <h3 style="{{ $task->is_done ? 'text-decoration: line-through;' : '' }}" class="mx-3">
                     {{ $task->title }}
                 </h3>
